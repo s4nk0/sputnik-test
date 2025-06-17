@@ -10,6 +10,9 @@ class ProductController extends Controller
 {
     public function prices(Request $request)
     {
+        $request->validate([
+            'currency'=>'nullable|string|in:USD,EUR',
+        ]);
         return ProductResource::collection(Product::latest()->get());
     }
 }
