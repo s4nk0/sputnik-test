@@ -10,6 +10,6 @@ class ProductController extends Controller
 {
     public function prices(Request $request)
     {
-        return ProductResource::collection(Product::all());
+        return ProductResource::collection(Product::latest()->get());
     }
 }
