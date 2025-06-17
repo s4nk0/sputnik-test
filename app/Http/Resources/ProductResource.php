@@ -14,11 +14,12 @@ class ProductResource extends JsonResource
      */
     public function toArray($request)
     {
+
         return [
             'id'=>$this->id,
             'title'=>$this->title,
-            'price'=>$this->getConvertedPrice($request->currency ?? 'USD'),
-            'price_string'=>$this->getConvertedPricePrefix($request->currency ?? 'USD'),
+            'price'=>$this->getConvertedPrice($request->currency ?? 'RUB'),
+            'price_string'=>$this->getConvertedPricePrefix($request->currency ?? 'RUB'),
         ];
     }
 }

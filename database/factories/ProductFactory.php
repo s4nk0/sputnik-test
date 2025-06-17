@@ -18,7 +18,7 @@ class ProductFactory extends Factory
             'title' => $this->faker->name(),
             'price'=>[
                 'amount'=> $this->faker->numberBetween(1000,10000),
-                'currency' =>'USD',
+                'currency' =>'RUB',
             ]
         ];
     }
